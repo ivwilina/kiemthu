@@ -12,12 +12,19 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author asus
  */
 public class maytinhthuongTest {
-    
+    private maytinhthuong cacl;
     public maytinhthuongTest() {
+        cacl = new maytinhthuong();
     }
 
     @Test
     public void testGiaiPT() {
+        cacl.setA(2);
+        cacl.setB(-3);
+        cacl.setC(1);
+        float delta = cacl.delta();
+        String expected = "PT co nghiem kep" ;
+         assertEquals(expected, cacl.giaiPT());
     }
     
 }

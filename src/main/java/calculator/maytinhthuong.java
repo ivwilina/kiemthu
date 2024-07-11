@@ -19,7 +19,6 @@ public class maytinhthuong {
         this.b = b;
         this.c = c;
     }
-
     public float getA() {
         return a;
     }
@@ -42,6 +41,10 @@ public class maytinhthuong {
 
     public void setC(float c) {
         this.c = c;
+    }
+    public float delta() {
+    float delta = b*b - 4*a*c;
+    return delta    ;
     }
     public String giaiPT() {
         // kiểm tra các hệ số
@@ -66,7 +69,7 @@ public class maytinhthuong {
         } else if (delta == 0) {
             x1 = (-b / (2 * a));
             return("Phương trình có nghiệm kép: "
-                    + "x1 = x2 = " + x1);
+                    + "x1 = x2 =" + x1);
         } else {
             return("Phương trình vô nghiệm!");
         }
