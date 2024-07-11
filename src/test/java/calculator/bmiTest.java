@@ -12,32 +12,25 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author asus
  */
 public class bmiTest {
-    
+    private bmi b1;
     public bmiTest() {
-    }
-
-    @Test
-    public void testGetChieucao() {
-    }
-
-    @Test
-    public void testSetChieucao() {
-    }
-
-    @Test
-    public void testGetCannang() {
-    }
-
-    @Test
-    public void testSetCannang() {
+        b1 = new bmi();
     }
 
     @Test
     public void testTinhBMI() {
+        b1.setCannang(60);
+        b1.setChieucao(176);
+        float expected = (float) 19.4;
+        assertEquals(expected, b1.tinhBMI());
     }
 
     @Test
     public void testDanhgia() {
+        b1.setCannang(60);
+        b1.setChieucao(176);
+        String expected = "Bình thường";
+        assertEquals(expected, b1.danhgia());
     }
     
 }

@@ -61,8 +61,8 @@ public class dautu {
             float tongtien = tong * (1+ thoigian*(laisuat/100));
             lai = tongtien - tong;
         }else if(hinhthuc.equals("Lãi kép")) {
-            Double temp1 = Math.pow((1+(laisuat/100)),thoigian);
-            lai = tong*temp1.floatValue()-tong;
+            float temp1 = (float) Math.pow((1+(laisuat/100)),thoigian);
+            lai = tong*temp1-tong;
         }
         return lai;
     }
@@ -72,8 +72,8 @@ public class dautu {
         if(hinhthuc.equals("Lãi đơn")) {
             tongtien = tong * (1+ thoigian*(laisuat/100));
         }else if(hinhthuc.equals("Lãi kép")) {
-            Double temp1 = Math.pow((1+(laisuat/100)),thoigian);
-            tongtien = tong*temp1.floatValue();
+            float temp1 = (float) Math.pow((1+(laisuat/100)),thoigian);
+            tongtien = tong*temp1;
         }
         return tongtien;
     }
